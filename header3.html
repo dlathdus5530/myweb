@@ -1,0 +1,85 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<!DOCTYPE html>
+<html lang="ko" class="sy">
+<head>
+  <title>My web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/mystyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/myscript1.js"></script>
+  <style>
+   .sy {border: 10px solid #555555} /*메인테두리*/
+   .podo{font-family: 'Baloo Thambi', cursive;
+	 	   font-size:30px;}	 
+	/* 必須icon */
+	.mpiconbox {
+    font-size:11px;
+    color:#fff;
+    border-radius:3px;
+    background-color:#ff0000;
+    padding: 3px 5px;
+    margin-left:3px;
+    font-weight: bold;
+} 	
+	.btn {
+	  width: 30px;
+	  height: 28px;
+	  border: none;
+	  position: absolute;
+	  
+	  float: left;
+	  background: url("../images/201919.png") no-repeat 0 0;
+	  background-size: 32px;
+	  cursor: pointer;
+	  text-indent: -9999px;
+	  overflow: hidden;
+	  border-radius: 0 5px 5px 0;
+	  -webkit-border-radius: 0 5px 5px 0;
+	  -moz-border-radius: 0 5px 5px 0;
+	}   
+  </style> 
+</head>
+<body>
+
+<!-- nav 메인카테고리  -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+			
+      </button>
+      <a class="navbar-brand podo" href="<%=request.getContextPath() %>/index.jsp">podo</a> <!-- 소연홈 -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      	 
+        <li><a href="../member/loginForm.jsp">ログイン</a></li><!-- 로그인 -->
+        <li><a href="../bbs/bbsList.jsp">掲示板</a></li> 		 <!-- 게시판 -->
+         <li><a href="#">公知事項</a></li>					 <!--공지사항-->
+        <li><a href="../pds/pdsList.jsp">フォトギャラリー</a></li>				 <!-- 포토갤러리 -->
+        <li><a href="../mail/mailForm.jsp">メール</a></li>						 <!--메일 -->
+        <li><a href="../bbs2/bbslist.do">掲示板(MVC)</a></li>					 <!-- 게시판(MVC) -->
+        <li><a href="../member2/loginForm.do">ログイン(MVC)</a></li>				 <!-- 로그인(MVC)-->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- 메인카테고리 끝 nav-->
+
+<!-- container시작 -->
+	<div class="container-fluid bg-3 text-center"> 
+	  <div class="row">
+	    <div class="col-sm-12">
+	    <!-- header분할 -->
+	    
+
